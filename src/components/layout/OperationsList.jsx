@@ -25,7 +25,7 @@ export const OperationsList = () => {
                 </div>
                 <div>
                     <button className={styles.addOperation}>
-                        Add a New Opeartion
+                        Go to Opeartions Panel
                     </button>
                 </div>
             </div>
