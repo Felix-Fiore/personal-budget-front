@@ -5,14 +5,29 @@ export const NavBar = () => {
         <div className={styles.navBar}>
             <ul>
                 <li>
+                    <span class="material-symbols-outlined">home</span>
                     <a>Home</a>
                 </li>
                 <li>
+                    <span class="material-symbols-outlined">view_timeline</span>
                     <a>Operations Panel</a>
                 </li>
-                <div className={styles.userTag}>
-                    <span>User</span>
-                </div>
+            </ul>
+            <ul className={styles.rightSide}>
+                <li>
+                    <div className={styles.userTag}>
+                        <span>Felix</span>
+                    </div>
+                </li>
+                <li>
+                    <button>
+                        {' '}
+                        <span class="material-symbols-outlined">
+                            logout
+                        </span>{' '}
+                        Log out
+                    </button>
+                </li>
             </ul>
         </div>
     );

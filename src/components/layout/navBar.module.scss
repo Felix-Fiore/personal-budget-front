@@ -2,39 +2,82 @@
 
 .navBar {
     background-color: $darkGrey;
-    color: $white;
-    padding: 1rem;
     width: auto;
+    display: flex;
+    justify-content: space-between;
 
     ul {
         display: flex;
         list-style: none;
 
-        padding: 1rem;
+        padding: 0rem;
         margin: 0;
 
-        a {
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: $white;
-            background-color: $red;
-            cursor: pointer;
-            padding: 1rem;
             font-size: 1.5rem;
             font-weight: $bold;
-            padding: 1rem;
-            margin: 1rem;
+            padding: 0.5rem;
+            margin: 0.5rem;
             transition: all 0.3s;
             border-radius: 5px;
+            cursor: pointer;
 
             &:hover {
-                color: $darkGrey;
+                color: $red;
+            }
+
+            a {
+                font-size: 1.5rem;
+                color: $white;
+            }
+
+            span {
+                font-size: 2.8rem;
+                margin-top: 0.5rem;
             }
         }
     }
 }
 
-.userTag {
-    span {
-        color: $red;
-        padding: 1rem;
+.rightSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+
+    button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        //margin-right: 1rem;
+        font-size: 1.5rem;
+        font-weight: $bold;
+        color: $white;
+        background-color: $darkGrey;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    .userTag {
+        span {
+            font-size: 2.5rem;
+            font-weight: lighter;
+            color: $red;
+            padding: 1rem;
+            cursor: auto;
+        }
     }
 }
