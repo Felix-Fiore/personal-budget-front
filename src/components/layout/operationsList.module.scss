@@ -27,52 +27,34 @@
     width: 100%;
     padding-bottom: 2rem;
     background-color: $darkGrey;
+    width: 80rem;
 }
 
-.operation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.operationsTable {
+    font-size: 2.5rem;
     width: 100%;
-    background-color: $white;
 
-    p {
-        font-size: 2.2rem;
-        margin: 0;
-        padding: 0.5rem;
+    th {
         background-color: $white;
-        border-inline: 1px solid $darkGrey;
+        color: $black;
+        padding: 0.5rem;
     }
 
-    .amount {
-        font-size: 2rem;
-        width: 10rem;
-    }
-
-    .category {
-        font-size: 2rem;
-        width: 15rem;
-    }
-
-    .description {
-        font-size: 2rem;
-        width: 30rem;
-    }
-
-    .date {
-        font-size: 2rem;
-        width: 10rem;
+    td {
+        background-color: $white;
+        color: $black;
+        padding: 0.5rem;
+        text-align: center;
     }
 }
 
-.addOperation {
+.goToOperation {
     display: flex;
     flex-direction: row;
-    font-size: 2rem;
-    color: $white;
     align-items: center;
     justify-content: center;
+    font-size: 2rem;
+    color: $white;
     font-weight: bold;
     width: 100%;
     background-color: $red;
@@ -85,5 +67,10 @@
     &:hover {
         background-color: $white;
         color: $red;
+    }
+
+    span {
+        margin-left: 0.5rem;
+        font-size: 2rem;
     }
 }

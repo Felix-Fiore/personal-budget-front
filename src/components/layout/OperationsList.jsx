@@ -8,24 +8,29 @@ export const OperationsList = () => {
                     <h3>Last Operations</h3>
                 </div>
                 <div className={styles.operationsContainer}>
-                    <div className={styles.operation}>
-                        <div className={styles.amount}>
-                            <p>amount</p>
-                        </div>
-                        <div className={styles.category}>
-                            <p>category</p>
-                        </div>
-                        <div className={styles.description}>
-                            <p>description</p>
-                        </div>
-                        <div className={styles.date}>
-                            <p>date</p>
-                        </div>
-                    </div>
+                    <table className={styles.operationsTable}>
+                        <thead>
+                            <tr>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Category</th>
+                                <th>Type</th>
+                            </tr>
+                            <tr>
+                                <td>$100</td>
+                                <td>2020-01-01</td>
+                                <td>food</td>
+                                <td>expense</td>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
                 <div>
-                    <button className={styles.addOperation}>
+                    <button className={styles.goToOperation}>
                         Go to Opeartions Panel
+                        <span className="material-symbols-outlined">
+                            arrow_forward
+                        </span>
                     </button>
                 </div>
             </div>

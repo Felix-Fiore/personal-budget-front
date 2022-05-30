@@ -5,11 +5,13 @@ export const NavBar = () => {
         <div className={styles.navBar}>
             <ul>
                 <li>
-                    <span class="material-symbols-outlined">home</span>
+                    <span className="material-symbols-outlined">home</span>
                     <a>Home</a>
                 </li>
                 <li>
-                    <span class="material-symbols-outlined">view_timeline</span>
+                    <span className="material-symbols-outlined">
+                        view_timeline
+                    </span>
                     <a>Operations Panel</a>
                 </li>
             </ul>
@@ -22,7 +24,7 @@ export const NavBar = () => {
                 <li>
                     <button>
                         {' '}
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             logout
                         </span>{' '}
                         Log out
