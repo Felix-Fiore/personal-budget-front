@@ -1,6 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './operationsList.module.scss';
 
 export const OperationsList = () => {
+    let navigate = useNavigate();
+
+    const goToOperationsPanel = () => {
+        navigate('/operations');
+    };
+
     return (
         <div className={styles.listContainer}>
             <div>
@@ -26,7 +33,10 @@ export const OperationsList = () => {
                     </table>
                 </div>
                 <div>
-                    <button className={styles.goToOperation}>
+                    <button
+                        className={styles.goToOperation}
+                        onClick={goToOperationsPanel}
+                    >
                         Go to Opeartions Panel
                         <span className="material-symbols-outlined">
                             arrow_forward
