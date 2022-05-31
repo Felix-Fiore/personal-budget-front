@@ -1,3 +1,9 @@
+import { LoginForm } from '../components/layout/LoginForm';
+
 export const LoginScreen = () => {
-    return <div>LoginScreen</div>;
+    return (
+        <>
+            <LoginForm />
+        </>
+    );
 };

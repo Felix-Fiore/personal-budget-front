@@ -1,4 +1,4 @@
-import { Link, useNavigate, NavLink } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 import styles from './navBar.module.scss';
 
 export const NavBar = () => {
