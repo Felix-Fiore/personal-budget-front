@@ -1,0 +1,80 @@
+@use '../../scss/variables' as *;
+
+.panelBotContainer {
+    text-align: center;
+    padding: 5rem;
+    margin: 8rem;
+    background-color: $blue;
+    color: $white;
+    width: auto;
+    border-radius: 5px;
+}
+
+.listsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.operationsListContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.operationsTable {
+    font-size: 2.5rem;
+    width: 100%;
+
+    th {
+        background-color: $white;
+        color: $black;
+        padding: 0.5rem;
+    }
+
+    td {
+        background-color: $white;
+        color: $black;
+        padding: 0.5rem;
+        text-align: center;
+    }
+}
+
+.operationsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.optionsButtons {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: space-between;
+
+    button {
+        background-color: $white;
+        color: $black;
+        padding: 1rem;
+        margin: 1rem;
+        border: none;
+        font-size: 2.5rem;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+        border-radius: 30px;
+    }
+    .editButton:hover {
+        background-color: $cian;
+        color: $white;
+    }
+
+    .deleteButton:hover {
+        background-color: $red;
+        color: $white;
+    }
+}
