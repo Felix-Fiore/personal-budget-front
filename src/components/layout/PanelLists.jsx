@@ -1,9 +1,15 @@
-import styles from './panelBot.module.scss';
+import styles from './panelList.module.scss';
 
-export const PanelBot = () => {
+export const PanelLists = () => {
     return (
-        <div className={styles.panelBotContainer}>
-            <div className={styles.panelBotTitle}>
+        <div className={styles.panelListsContainer}>
+            <div>
+                <h3>Add a new operation</h3>
+            </div>
+            <div>
+                <button className={styles.addButton}>+</button>
+            </div>
+            <div className={styles.panelListsTitle}>
                 <h3>Your Operations history</h3>
             </div>
             <div className={styles.listsContainer}>
