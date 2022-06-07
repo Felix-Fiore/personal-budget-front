@@ -1,13 +1,77 @@
 import styles from './panelList.module.scss';
+import Modal from 'react-modal';
+import { useState } from 'react';
+import './modalStyle.css';
+
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+    },
+};
+Modal.setAppElement('#root');
 
 export const PanelLists = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const openModal = () => {
+        setIsOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsOpen(false);
+    };
+
     return (
         <div className={styles.panelListsContainer}>
             <div>
                 <h3>Add a new operation</h3>
+                <Modal
+                    isOpen={isOpen}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    className="modal"
+                    overlayClassName="modalBackground"
+                >
+                    <h2>Complete the following form</h2>
+                    <div className={styles.formContainer}>
+                        <form>
+                            <label>
+                                <span>Amount</span>
+                                <input type="number" />
+                            </label>
+                            <label>
+                                <span>Concept</span>
+                                <select>
+                                    <option value="">Food</option>
+                                    <option value="">Taxes</option>
+                                    <option value="">Transport</option>
+                                    <option value="">Other</option>
+                                </select>
+                            </label>
+                            <label>
+                                <span>Date</span>
+                                <input type="date" />
+                            </label>
+                            <label>
+                                <span>Operation type</span>
+                                <select>
+                                    <option value="">Income</option>
+                                    <option value="">Outcome</option>
+                                </select>
+                            </label>
+                        </form>
+                    </div>
+                </Modal>
             </div>
             <div>
-                <button className={styles.addButton}>+</button>
+                <button className={styles.addButton} onClick={openModal}>
+                    +
+                </button>
             </div>
             <div className={styles.panelListsTitle}>
                 <h3>Your Operations history</h3>
