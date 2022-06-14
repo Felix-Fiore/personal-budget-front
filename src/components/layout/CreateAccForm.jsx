@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import styles from './loginForm.module.scss';
+import styles from './createAccform.module.scss';
 
-export const LoginForm = () => {
+export const CreateAccForm = () => {
     let navigate = useNavigate();
 
     const navigateToHome = () => {
@@ -18,10 +18,10 @@ export const LoginForm = () => {
                 <input type="password" className={styles.input} />
 
                 <button className={styles.btn} onClick={navigateToHome}>
-                    Log in
+                    Create Account
                 </button>
-                <NavLink to={'/newaccount'}>
-                    <p>Do not have an account? Create a new one </p>
+                <NavLink to={'/login'}>
+                    <p>Do you have an account already? Go to login </p>
                 </NavLink>
             </form>
         </div>
