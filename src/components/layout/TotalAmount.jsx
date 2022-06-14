@@ -4,11 +4,11 @@ export const TotalAmount = () => {
     return (
         <div className={styles.container}>
             <div>
-                <h2>Welcome User!</h2>
+                <h2>Bienvenido Usuario!</h2>
             </div>
             <div className={styles.amountContainer}>
                 <div>
-                    <h3>This is your balance</h3>
+                    <h3>Éste es tu balance actual</h3>
                 </div>
                 <div className="totalCash">
                     <p>$3000</p>

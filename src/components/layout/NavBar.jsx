@@ -32,7 +32,7 @@ export const NavBar = () => {
                         <span className="material-symbols-outlined">
                             view_timeline
                         </span>
-                        Operations Panel
+                        Operaciones
                     </NavLink>
                 </li>
             </ul>
@@ -48,7 +48,7 @@ export const NavBar = () => {
                         <span className="material-symbols-outlined">
                             logout
                         </span>{' '}
-                        Log out
+                        Salir
                     </button>
                 </li>
             </ul>

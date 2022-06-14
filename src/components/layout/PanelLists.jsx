@@ -29,7 +29,7 @@ export const PanelLists = () => {
     return (
         <div className={styles.panelListsContainer}>
             <div>
-                <h3>Add a new operation</h3>
+                <h3>Agregar una nueva operación</h3>
                 <Modal
                     isOpen={isOpen}
                     onRequestClose={closeModal}
@@ -38,32 +38,33 @@ export const PanelLists = () => {
                     overlayClassName="modalBackground"
                 >
                     <div className={styles.formTitle}>
-                        <h2>Complete the following form</h2>
+                        <h2>Completá el siguiente formulario</h2>
                     </div>
                     <div className={styles.formContainer}>
                         <form>
                             <label>
-                                <span>Amount</span>
+                                <span>Monto</span>
                                 <input type="number" />
                             </label>
                             <label>
-                                <span>Concept</span>
+                                <span>Concepto</span>
                                 <select>
-                                    <option value="">Food</option>
-                                    <option value="">Taxes</option>
-                                    <option value="">Transport</option>
-                                    <option value="">Other</option>
+                                    <option value="">Comida</option>
+                                    <option value="">Impuestos</option>
+                                    <option value="">Transporte</option>
+                                    <option value="">Entretenimiento</option>
+                                    <option value="">Otros</option>
                                 </select>
                             </label>
                             <label>
-                                <span>Date</span>
+                                <span>Fecha</span>
                                 <input type="date" />
                             </label>
                             <label>
-                                <span>Operation type</span>
+                                <span>Tipo de Operación</span>
                                 <select>
-                                    <option value="">Income</option>
-                                    <option value="">Outcome</option>
+                                    <option value="">Ingreso</option>
+                                    <option value="">Egreso</option>
                                 </select>
                             </label>
                         </form>
@@ -72,9 +73,11 @@ export const PanelLists = () => {
                                 className={styles.exitButton}
                                 onClick={closeModal}
                             >
-                                Exit
+                                Salir
                             </button>
-                            <button className={styles.saveButton}>Save</button>
+                            <button className={styles.saveButton}>
+                                Guardar
+                            </button>
                         </div>
                     </div>
                 </Modal>
@@ -85,12 +88,12 @@ export const PanelLists = () => {
                 </button>
             </div>
             <div className={styles.panelListsTitle}>
-                <h3>Your Operations history</h3>
+                <h3>Historial de operaciones</h3>
             </div>
             <div className={styles.listsContainer}>
                 <div className={styles.operationsListContainer}>
                     <div className={styles.operationsListTitle}>
-                        <h3>Income Operations</h3>
+                        <h3>Ingresos</h3>
                         <div className={styles.operationsList}>
                             <div className={styles.listContainer}>
                                 <div>
@@ -100,10 +103,10 @@ export const PanelLists = () => {
                                         >
                                             <thead>
                                                 <tr>
-                                                    <th>Amount</th>
-                                                    <th>Date</th>
-                                                    <th>Concept</th>
-                                                    <th>Type</th>
+                                                    <th>Monto</th>
+                                                    <th>Fecha</th>
+                                                    <th>Concepto</th>
+                                                    <th>Tipo</th>
                                                 </tr>
                                                 <tr>
                                                     <td>$100</td>
@@ -135,7 +138,7 @@ export const PanelLists = () => {
                         </div>
                     </div>
                     <div className={styles.operationsListTitle}>
-                        <h3>Outcome Operations</h3>
+                        <h3>Egresos</h3>
 
                         <div className={styles.operationsList}>
                             <div className={styles.listContainer}>
@@ -146,10 +149,10 @@ export const PanelLists = () => {
                                         >
                                             <thead>
                                                 <tr>
-                                                    <th>Amount</th>
-                                                    <th>Date</th>
-                                                    <th>Concept</th>
-                                                    <th>Type</th>
+                                                    <th>Monto</th>
+                                                    <th>Fecha</th>
+                                                    <th>Concepto</th>
+                                                    <th>Tipo</th>
                                                 </tr>
                                                 <tr>
                                                     <td>$100</td>

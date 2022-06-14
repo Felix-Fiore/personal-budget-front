@@ -12,16 +12,16 @@ export const OperationsList = () => {
         <div className={styles.listContainer}>
             <div>
                 <div className={styles.containerTitle}>
-                    <h3>Last Operations</h3>
+                    <h3>Últimas operaciones</h3>
                 </div>
                 <div className={styles.operationsContainer}>
                     <table className={styles.operationsTable}>
                         <thead>
                             <tr>
-                                <th>Amount</th>
-                                <th>Date</th>
-                                <th>Category</th>
-                                <th>Type</th>
+                                <th>Monto</th>
+                                <th>Fecha</th>
+                                <th>Concepto</th>
+                                <th>Tipo</th>
                             </tr>
                             <tr>
                                 <td>$100</td>
@@ -37,7 +37,7 @@ export const OperationsList = () => {
                         className={styles.goToOperation}
                         onClick={goToOperationsPanel}
                     >
-                        Go to Opeartions Panel
+                        Ir al panel de operaciones
                         <span className="material-symbols-outlined">
                             arrow_forward
                         </span>

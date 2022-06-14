@@ -14,14 +14,14 @@ export const CreateAccForm = () => {
                 <label>Email</label>
                 <input type="email" className={styles.input} />
 
-                <label>Password</label>
+                <label>Contraseña</label>
                 <input type="password" className={styles.input} />
 
                 <button className={styles.btn} onClick={navigateToHome}>
-                    Create Account
+                    Crear Cuenta
                 </button>
                 <NavLink to={'/login'}>
-                    <p>Do you have an account already? Go to login </p>
+                    <p>Ya tenés una cuenta? Ingresá desde acá </p>
                 </NavLink>
             </form>
         </div>

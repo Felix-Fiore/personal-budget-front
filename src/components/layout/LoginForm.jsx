@@ -14,14 +14,14 @@ export const LoginForm = () => {
                 <label>Email</label>
                 <input type="email" className={styles.input} />
 
-                <label>Password</label>
+                <label>Contraseña</label>
                 <input type="password" className={styles.input} />
 
                 <button className={styles.btn} onClick={navigateToHome}>
-                    Log in
+                    Ingresar
                 </button>
                 <NavLink to={'/newaccount'}>
-                    <p>Do not have an account? Create a new one </p>
+                    <p>No tenés una cuenta? Creala desde acá </p>
                 </NavLink>
             </form>
         </div>
