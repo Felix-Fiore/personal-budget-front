@@ -5,7 +5,7 @@
     font-size: 10rem;
     padding: 5rem;
     margin: 8rem;
-    background-color: $darkGrey;
+    background-color: $orange;
     color: $white;
     width: auto;
     border-radius: 5px;
@@ -13,6 +13,7 @@
     h2 {
         color: $white;
         font-size: 6rem;
+        font-weight: bold;
     }
 }
 
@@ -25,12 +26,13 @@
     h3 {
         color: $white;
         font-size: 4rem;
-        font-weight: lighter;
+        font-weight: bold;
         margin-left: 4rem;
         margin-right: 4rem;
     }
 
     p {
+        font-weight: bold;
         font-size: 8rem;
         margin-left: 4rem;
         margin-right: 4rem;

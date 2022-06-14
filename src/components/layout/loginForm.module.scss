@@ -15,7 +15,7 @@
     form {
         display: flex;
         flex-direction: column;
-        background-color: $blue;
+        background-color: $cian;
         padding: 10rem;
         border-radius: 5px;
 
@@ -42,12 +42,12 @@
             color: $black;
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.2s ease-in-out;
             border-radius: 5px;
             margin-top: 1rem;
 
             &:hover {
-                background-color: $rose;
+                background-color: $orange;
                 color: $white;
             }
         }

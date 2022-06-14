@@ -8,7 +8,7 @@
     width: auto;
     padding: 2rem;
     margin: 8rem;
-    background-color: $darkGrey;
+    background-color: $orange;
     border-radius: 5px;
 }
 
@@ -26,7 +26,7 @@
     justify-content: center;
     width: 100%;
     padding-bottom: 2rem;
-    background-color: $darkGrey;
+    background-color: $orange;
     width: 80rem;
 }
 
@@ -57,7 +57,7 @@
     color: $white;
     font-weight: bold;
     width: 100%;
-    background-color: $red;
+    background-color: $purple;
     border-top: 1px solid $darkGrey;
     padding: 1rem;
     border-style: none;
@@ -66,7 +66,7 @@
 
     &:hover {
         background-color: $white;
-        color: $red;
+        color: $black;
     }
 
     span {
