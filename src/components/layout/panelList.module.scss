@@ -94,3 +94,71 @@
         color: $white;
     }
 }
+
+.formContainer {
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+
+    form {
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    label {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 1rem;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            display: flex;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    input {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+    }
+}
+
+.formTitle {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.formButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+
+    button {
+        background-color: $blue;
+        color: $white;
+        padding: 1rem;
+        margin: 1rem;
+        border: none;
+        font-size: 2.5rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        border-radius: 0.5rem;
+    }
+
+    .exitButton:hover {
+        background-color: $red;
+        color: $white;
+    }
+
+    .saveButton:hover {
+        background-color: $green;
+        color: $white;
+    }
+}

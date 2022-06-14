@@ -37,7 +37,9 @@ export const PanelLists = () => {
                     className="modal"
                     overlayClassName="modalBackground"
                 >
-                    <h2>Complete the following form</h2>
+                    <div className={styles.formTitle}>
+                        <h2>Complete the following form</h2>
+                    </div>
                     <div className={styles.formContainer}>
                         <form>
                             <label>
@@ -65,6 +67,15 @@ export const PanelLists = () => {
                                 </select>
                             </label>
                         </form>
+                        <div className={styles.formButtons}>
+                            <button
+                                className={styles.exitButton}
+                                onClick={closeModal}
+                            >
+                                Exit
+                            </button>
+                            <button className={styles.saveButton}>Save</button>
+                        </div>
                     </div>
                 </Modal>
             </div>
