@@ -1,7 +1,7 @@
 @use '../../scss/variables' as *;
 
 .navBar {
-    background-color: $darkGrey;
+    background-color: $cian;
     width: auto;
     display: flex;
     justify-content: space-between;
@@ -26,17 +26,17 @@
             border-radius: 5px;
 
             .active {
-                color: $red;
+                color: $purple;
                 pointer-events: none;
             }
 
             a {
                 font-size: 1.5rem;
                 color: $white;
-                transition: all 0.3s ease-in-out;
+                transition: all 0.2s ease-in-out;
 
                 &:hover {
-                    color: $red;
+                    color: $purple;
                 }
             }
 
@@ -68,10 +68,10 @@
         font-size: 1.5rem;
         font-weight: $bold;
         color: $white;
-        background-color: $darkGrey;
+        background-color: $cian;
         border: none;
         cursor: pointer;
-        transition: all 0.3s;
+        transition: all 0.2s;
 
         &:hover {
             color: $red;
@@ -81,8 +81,8 @@
     .userTag {
         span {
             font-size: 2.5rem;
-            font-weight: lighter;
-            color: $red;
+            font-weight: bold;
+            color: $white;
             padding: 1rem;
             cursor: auto;
         }
