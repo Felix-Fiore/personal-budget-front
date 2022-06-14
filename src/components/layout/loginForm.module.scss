@@ -52,4 +52,10 @@
             }
         }
     }
+    @media (max-width: 540px) {
+        form {
+            width: 90%;
+            padding: 3rem;
+        }
+    }
 }
