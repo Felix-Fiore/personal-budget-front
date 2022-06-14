@@ -81,7 +81,7 @@ export const PanelLists = () => {
             </div>
             <div>
                 <button className={styles.addButton} onClick={openModal}>
-                    +
+                    <span className="material-symbols-outlined">add</span>
                 </button>
             </div>
             <div className={styles.panelListsTitle}>
@@ -117,12 +117,16 @@ export const PanelLists = () => {
                                             <button
                                                 className={styles.deleteButton}
                                             >
-                                                del
+                                                <span className="material-symbols-outlined">
+                                                    delete
+                                                </span>
                                             </button>
                                             <button
                                                 className={styles.editButton}
                                             >
-                                                edit
+                                                <span className="material-symbols-outlined">
+                                                    edit
+                                                </span>
                                             </button>
                                         </div>
                                     </div>
@@ -159,12 +163,16 @@ export const PanelLists = () => {
                                             <button
                                                 className={styles.deleteButton}
                                             >
-                                                del
+                                                <span className="material-symbols-outlined">
+                                                    delete
+                                                </span>
                                             </button>
                                             <button
                                                 className={styles.editButton}
                                             >
-                                                edit
+                                                <span className="material-symbols-outlined">
+                                                    edit
+                                                </span>
                                             </button>
                                         </div>
                                     </div>

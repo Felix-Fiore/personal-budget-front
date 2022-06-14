@@ -18,10 +18,11 @@
     border: none;
     font-size: 3rem;
     cursor: pointer;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border-radius: 1rem;
 
     &:hover {
-        background-color: $rose;
+        background-color: $green;
         color: $white;
     }
 }
@@ -79,10 +80,10 @@
         padding: 1rem;
         margin: 1rem;
         border: none;
-        font-size: 2.5rem;
+        font-size: 2rem;
         cursor: pointer;
-        transition: all 0.25s ease-in-out;
-        border-radius: 30px;
+        transition: all 0.2s ease-in-out;
+        border-radius: 1rem;
     }
     .editButton:hover {
         background-color: $cian;
