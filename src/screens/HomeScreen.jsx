@@ -1,5 +1,5 @@
+import { LastOperations } from '../components/layout/LastOperations.jsx';
 import { NavBar } from '../components/layout/NavBar.jsx';
-import { OperationsList } from '../components/layout/OperationsList.jsx';
 import { TotalAmount } from '../components/layout/TotalAmount.jsx';
 
 export const HomeScreen = () => {
@@ -7,7 +7,7 @@ export const HomeScreen = () => {
         <>
             <NavBar />
             <TotalAmount />
-            <OperationsList />
+            <LastOperations />
         </>
     );
 };

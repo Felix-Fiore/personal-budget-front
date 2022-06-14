@@ -38,3 +38,17 @@
         margin-right: 4rem;
     }
 }
+
+@media (max-width: 1000px) {
+    .container {
+        margin: 1rem;
+    }
+
+    .amountContainer {
+        flex-direction: column;
+
+        h3 {
+            margin-top: 6rem;
+        }
+    }
+}

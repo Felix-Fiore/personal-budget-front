@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import styles from './operationsList.module.scss';
+import styles from './lastOperations.module.scss';
 
-export const OperationsList = () => {
+export const LastOperations = () => {
     let navigate = useNavigate();
 
     const goToOperationsPanel = () => {

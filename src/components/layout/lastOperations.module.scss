@@ -74,3 +74,23 @@
         font-size: 2rem;
     }
 }
+
+@media (max-width: 1000px) {
+    .listContainer {
+        margin: 1rem;
+    }
+
+    .operationsContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .listContainer {
+        margin: 1rem;
+    }
+
+    .operationsTable {
+        font-size: 2rem;
+    }
+}
