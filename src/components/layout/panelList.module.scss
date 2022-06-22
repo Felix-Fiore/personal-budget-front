@@ -1,185 +1,185 @@
 @use '../../scss/variables' as *;
 
 .panelListsContainer {
-    text-align: center;
-    padding: 5rem;
-    margin: 8rem;
-    background-color: $orange;
-    color: $white;
-    width: auto;
-    border-radius: 5px;
+  text-align: center;
+  padding: 5rem;
+  margin: 8rem;
+  background-color: $orange;
+  color: $white;
+  width: auto;
+  border-radius: 5px;
 }
 
 .addButton {
+  background-color: $white;
+  color: $black;
+  padding: 1rem;
+  margin: 1rem;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 1rem;
+
+  &:hover {
+    background-color: $purple;
+    color: $white;
+  }
+}
+
+.listsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.operationsListContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.operationsTable {
+  font-size: 2.5rem;
+  width: 100%;
+
+  th {
+    background-color: $white;
+    color: $black;
+    padding: 0.5rem;
+  }
+
+  td {
+    background-color: $white;
+    color: $black;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
+
+.operationsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.optionsButtons {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: space-between;
+
+  button {
     background-color: $white;
     color: $black;
     padding: 1rem;
     margin: 1rem;
     border: none;
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     border-radius: 1rem;
+  }
+  .editButton:hover {
+    background-color: $purple;
+    color: $white;
+  }
 
-    &:hover {
-        background-color: $purple;
-        color: $white;
-    }
-}
-
-.listsContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-}
-
-.operationsListContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 2rem;
-}
-
-.operationsTable {
-    font-size: 2.5rem;
-    width: 100%;
-
-    th {
-        background-color: $white;
-        color: $black;
-        padding: 0.5rem;
-    }
-
-    td {
-        background-color: $white;
-        color: $black;
-        padding: 0.5rem;
-        text-align: center;
-    }
-}
-
-.operationsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.optionsButtons {
-    display: flex;
-    flex-direction: row;
-    padding: 1rem;
-    justify-content: space-between;
-
-    button {
-        background-color: $white;
-        color: $black;
-        padding: 1rem;
-        margin: 1rem;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        border-radius: 1rem;
-    }
-    .editButton:hover {
-        background-color: $cian;
-        color: $white;
-    }
-
-    .deleteButton:hover {
-        background-color: $red;
-        color: $white;
-    }
+  .deleteButton:hover {
+    background-color: $red;
+    color: $white;
+  }
 }
 
 .formContainer {
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+
+  form {
     align-items: center;
     width: 100%;
     padding: 1rem;
+  }
 
-    form {
-        align-items: center;
-        width: 100%;
-        padding: 1rem;
+  label {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: flex;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
+  }
 
-    label {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin: 1rem;
-        justify-content: center;
-        align-items: center;
+  input {
+    width: 100%;
+  }
 
-        span {
-            display: flex;
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-    }
-
-    input {
-        width: 100%;
-    }
-
-    select {
-        width: 100%;
-    }
+  select {
+    width: 100%;
+  }
 }
 
 .formTitle {
-    margin-top: 1rem;
-    padding: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
 }
 
 .formButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+
+  button {
+    background-color: $purple;
+    color: $white;
     padding: 1rem;
+    margin: 1rem;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.5rem;
+  }
 
-    button {
-        background-color: $cian;
-        color: $white;
-        padding: 1rem;
-        margin: 1rem;
-        border: none;
-        font-size: 2.5rem;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        border-radius: 0.5rem;
-    }
+  .exitButton:hover {
+    background-color: $red;
+    color: $white;
+  }
 
-    .exitButton:hover {
-        background-color: $red;
-        color: $white;
-    }
-
-    .saveButton:hover {
-        background-color: $green;
-        color: $white;
-    }
+  .saveButton:hover {
+    background-color: $green;
+    color: $white;
+  }
 }
 
 @media (max-width: 930px) {
-    .panelListsContainer {
-        margin: 1rem;
-    }
+  .panelListsContainer {
+    margin: 1rem;
+  }
 }
 
 @media (max-width: 765px) {
-    .panelListsContainer {
-        margin: 1rem;
-    }
+  .panelListsContainer {
+    margin: 1rem;
+  }
 
-    h3 {
-        padding-bottom: 1rem;
-    }
+  h3 {
+    padding-bottom: 1rem;
+  }
 
-    .operationsListContainer {
-        flex-direction: column;
-    }
+  .operationsListContainer {
+    flex-direction: column;
+  }
 }

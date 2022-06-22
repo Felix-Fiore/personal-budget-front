@@ -1,61 +1,69 @@
 @use '../../scss/variables' as *;
 
 .formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  background-image: url(../../assets/background1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    background-color: $purple;
+    padding: 10rem;
+    border-radius: 5px;
 
-    background-image: url(../../assets/background1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    label {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: $white;
+      font-weight: bold;
+    }
 
+    input {
+      font-size: 2rem;
+      padding: 1rem;
+      border: none;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+
+    button {
+      font-size: 2rem;
+      padding: 1rem;
+      border: none;
+      background-color: $white;
+      color: $black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      border-radius: 5px;
+      margin-top: 1rem;
+
+      &:hover {
+        background-color: $orange;
+        color: $white;
+      }
+    }
+    p {
+      color: $white;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+  @media (max-width: 540px) {
     form {
-        display: flex;
-        flex-direction: column;
-        background-color: $cian;
-        padding: 10rem;
-        border-radius: 5px;
-
-        label {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            color: $white;
-            font-weight: bold;
-        }
-
-        input {
-            font-size: 2rem;
-            padding: 1rem;
-            border: none;
-            margin-bottom: 1rem;
-            border-radius: 5px;
-        }
-
-        button {
-            font-size: 2rem;
-            padding: 1rem;
-            border: none;
-            background-color: $white;
-            color: $black;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-            border-radius: 5px;
-            margin-top: 1rem;
-
-            &:hover {
-                background-color: $orange;
-                color: $white;
-            }
-        }
+      width: 90%;
+      padding: 3rem;
     }
-    @media (max-width: 540px) {
-        form {
-            width: 90%;
-            padding: 3rem;
-        }
-    }
+  }
 }

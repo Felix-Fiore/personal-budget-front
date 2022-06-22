@@ -1,58 +1,58 @@
 @use './variables' as *;
 
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    font-family: $font;
-    font-size: 1.6rem;
+  font-family: $font;
+  font-size: 1.6rem;
 
-    &.fijar-body {
-        overflow: hidden;
-    }
+  &.fijar-body {
+    overflow: hidden;
+  }
 }
 
 p {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .container {
-    //max-width: 120rem;
-    width: 95%;
-    margin: 0 auto;
+  //max-width: 120rem;
+  width: 95%;
+  margin: 0 auto;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 h1,
 h2,
 h3 {
-    margin: 0;
+  margin: 0;
 }
 
 h1 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 h2 {
-    font-size: 3.6rem;
+  font-size: 3.6rem;
 }
 
 h3 {
-    font-size: 3rem;
+  font-size: 3rem;
 }

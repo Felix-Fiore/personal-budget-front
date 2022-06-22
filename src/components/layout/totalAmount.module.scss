@@ -1,54 +1,54 @@
 @use '../../scss/variables' as *;
 
 .container {
-    text-align: center;
-    font-size: 10rem;
-    padding: 5rem;
-    margin: 8rem;
-    background-color: $orange;
-    color: $white;
-    width: auto;
-    border-radius: 5px;
+  text-align: center;
+  font-size: 10rem;
+  padding: 5rem;
+  margin: 8rem;
+  background-color: $orange;
+  color: $white;
+  width: auto;
+  border-radius: 5px;
 
-    h2 {
-        color: $white;
-        font-size: 6rem;
-        font-weight: bold;
-    }
+  h2 {
+    color: $white;
+    font-size: 6rem;
+    font-weight: bold;
+  }
 }
 
 .amountContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
 
-    h3 {
-        color: $white;
-        font-size: 4rem;
-        font-weight: bold;
-        margin-left: 4rem;
-        margin-right: 4rem;
-    }
+  h3 {
+    color: $white;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 
-    p {
-        font-weight: bold;
-        font-size: 8rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
-    }
+  p {
+    font-weight: bold;
+    font-size: 8rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 }
 
 @media (max-width: 1000px) {
-    .container {
-        margin: 1rem;
-    }
+  .container {
+    margin: 1rem;
+  }
 
-    .amountContainer {
-        flex-direction: column;
+  .amountContainer {
+    flex-direction: column;
 
-        h3 {
-            margin-top: 6rem;
-        }
+    h3 {
+      margin-top: 6rem;
     }
+  }
 }

@@ -1,96 +1,96 @@
 @use '../../scss/variables' as *;
 
 .listContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    padding: 2rem;
-    margin: 8rem;
-    background-color: $orange;
-    border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 2rem;
+  margin: 8rem;
+  background-color: $orange;
+  border-radius: 5px;
 }
 
 .containerTitle {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2rem;
-    color: $white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  color: $white;
 }
 
 .operationsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding-bottom: 2rem;
-    background-color: $orange;
-    width: 80rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 2rem;
+  background-color: $orange;
+  width: 80rem;
 }
 
 .operationsTable {
-    font-size: 2.5rem;
-    width: 100%;
+  font-size: 2.5rem;
+  width: 100%;
 
-    th {
-        background-color: $white;
-        color: $black;
-        padding: 0.5rem;
-    }
+  th {
+    background-color: $white;
+    color: $black;
+    padding: 0.5rem;
+  }
 
-    td {
-        background-color: $white;
-        color: $black;
-        padding: 0.5rem;
-        text-align: center;
-    }
+  td {
+    background-color: $white;
+    color: $black;
+    padding: 0.5rem;
+    text-align: center;
+  }
 }
 
 .goToOperation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: $white;
+  font-weight: bold;
+  width: 100%;
+  background-color: $purple;
+  border-top: 1px solid $darkGrey;
+  padding: 1rem;
+  border-style: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
+
+  span {
+    margin-left: 0.5rem;
     font-size: 2rem;
-    color: $white;
-    font-weight: bold;
-    width: 100%;
-    background-color: $purple;
-    border-top: 1px solid $darkGrey;
-    padding: 1rem;
-    border-style: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-        background-color: $white;
-        color: $black;
-    }
-
-    span {
-        margin-left: 0.5rem;
-        font-size: 2rem;
-    }
+  }
 }
 
 @media (max-width: 1000px) {
-    .listContainer {
-        margin: 1rem;
-    }
+  .listContainer {
+    margin: 1rem;
+  }
 
-    .operationsContainer {
-        width: 100%;
-    }
+  .operationsContainer {
+    width: 100%;
+  }
 }
 
 @media (max-width: 400px) {
-    .listContainer {
-        margin: 1rem;
-    }
+  .listContainer {
+    margin: 1rem;
+  }
 
-    .operationsTable {
-        font-size: 2rem;
-    }
+  .operationsTable {
+    font-size: 2rem;
+  }
 }

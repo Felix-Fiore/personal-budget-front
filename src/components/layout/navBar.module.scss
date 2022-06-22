@@ -1,90 +1,90 @@
 @use '../../scss/variables' as *;
 
 .navBar {
-    background-color: $cian;
-    width: auto;
+  background-color: $purple;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
     display: flex;
-    justify-content: space-between;
+    list-style: none;
 
-    ul {
-        display: flex;
-        list-style: none;
+    padding: 0rem;
+    margin: 0;
 
-        padding: 0rem;
-        margin: 0;
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      font-size: 1.5rem;
+      font-weight: $bold;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      border-radius: 5px;
 
-        li {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: $white;
-            font-size: 1.5rem;
-            font-weight: $bold;
-            padding: 0.5rem;
-            margin: 0.5rem;
-            border-radius: 5px;
+      .active {
+        color: $orange;
+        pointer-events: none;
+      }
 
-            .active {
-                color: $purple;
-                pointer-events: none;
-            }
+      a {
+        font-size: 1.5rem;
+        color: $white;
+        transition: all 0.2s ease-in-out;
 
-            a {
-                font-size: 1.5rem;
-                color: $white;
-                transition: all 0.2s ease-in-out;
-
-                &:hover {
-                    color: $purple;
-                }
-            }
-
-            span {
-                display: flex;
-                justify-content: center;
-                font-size: 2.8rem;
-                margin-top: 0.5rem;
-                cursor: pointer;
-            }
+        &:hover {
+          color: $orange;
         }
+      }
+
+      span {
+        display: flex;
+        justify-content: center;
+        font-size: 2.8rem;
+        margin-top: 0.5rem;
+        cursor: pointer;
+      }
     }
+  }
 }
 
 .rightSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+
+  button {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    //margin-right: 1rem;
+    font-size: 1.5rem;
+    font-weight: $bold;
+    color: $white;
+    background-color: $purple;
+    border: none;
     cursor: pointer;
+    transition: all 0.2s;
 
-    button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        //margin-right: 1rem;
-        font-size: 1.5rem;
-        font-weight: $bold;
-        color: $white;
-        background-color: $cian;
-        border: none;
-        cursor: pointer;
-        transition: all 0.2s;
-
-        &:hover {
-            color: $red;
-        }
+    &:hover {
+      color: $red;
     }
+  }
 
-    .userTag {
-        span {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: $white;
-            padding: 1rem;
-            cursor: auto;
-        }
+  .userTag {
+    span {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: $white;
+      padding: 1rem;
+      cursor: auto;
     }
+  }
 }
