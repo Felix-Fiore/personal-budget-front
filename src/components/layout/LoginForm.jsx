@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
+import { useDispatch, useSelector } from 'react-redux';
+import { userLogin } from '../../store/slices/userSlice/userThunks';
 import styles from './loginForm.module.scss';
 
 const loginFormFields = {
@@ -10,11 +13,19 @@ const loginFormFields = {
 export const LoginForm = () => {
   const { email, password, onInputChange } = useForm(loginFormFields);
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const handleLoginSubmit = (e) => {
+  const dispatch = useDispatch();
+
+  const { isLoggedIn } = useSelector((state) => state.user);
+
+  const handleLogin = (e) => {
     e.preventDefault();
     console.log({ email, password });
+
+    dispatch(userLogin(email, password));
+
+    //navigate('/');
   };
 
   return (
@@ -38,7 +49,7 @@ export const LoginForm = () => {
           onChange={onInputChange}
         />
 
-        <button className={styles.btn} onClick={handleLoginSubmit}>
+        <button className={styles.btn} onClick={handleLogin}>
           Ingresar
         </button>
         <NavLink to={'/newaccount'}>
