@@ -13,6 +13,11 @@ export const userSlice = createSlice({
       state.name = action.payload.name;
       state.token = action.payload.token;
     },
+    logout: (state) => {
+      state.isLoggedIn = false;
+      state.name = '';
+      state.token = '';
+    },
   },
 });
 // Action creators are generated for each case reducer function

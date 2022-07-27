@@ -51,4 +51,10 @@ const createUser = (name, email, password) => {
   };
 };
 
-export { userLogin, createUser };
+const userLogout = () => {
+  return async (dispatch) => {
+    dispatch(userSlice.actions.logout());
+  };
+};
+
+export { userLogin, createUser, userLogout };

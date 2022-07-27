@@ -1,13 +1,20 @@
 import { useNavigate, NavLink } from 'react-router-dom';
+import { userLogout } from '../../store/slices/userSlice/userThunks';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from './navBar.module.scss';
 
 export const NavBar = () => {
   let navigate = useNavigate();
 
+  const dispatch = useDispatch();
+
   const navigateToLogin = () => {
     navigate('/login');
   };
 
+  const handleLogout = () => {
+    dispatch(userLogout());
+  };
   return (
     <div className={styles.navBar}>
       <ul>
@@ -43,7 +50,10 @@ export const NavBar = () => {
         <li>
           <button onClick={navigateToLogin}>
             {' '}
-            <span className="material-symbols-outlined">logout</span> Salir
+            <span className="material-symbols-outlined" onClick={handleLogout}>
+              logout
+            </span>{' '}
+            Salir
           </button>
         </li>
       </ul>
