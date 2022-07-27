@@ -51,6 +51,15 @@
         color: $white;
       }
     }
+
+    a {
+      color: $white;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $orange;
+      }
+    }
   }
   @media (max-width: 540px) {
     form {
