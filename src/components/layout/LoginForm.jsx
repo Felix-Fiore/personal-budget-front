@@ -24,9 +24,13 @@ export const LoginForm = () => {
     console.log({ email, password });
 
     dispatch(userLogin(email, password));
-
-    //navigate('/');
   };
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate('/');
+    }
+  }, [isLoggedIn]);
 
   return (
     <div className={styles.formContainer}>

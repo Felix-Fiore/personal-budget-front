@@ -1,5 +1,6 @@
 import { personalBudgetAPI } from '../../../api/personalBudgetAPI';
 import { userSlice } from './userSlice';
+import { toast } from 'react-hot-toast';
 
 export const userLogin = (email, password) => {
   return async (dispatch) => {
@@ -8,9 +9,6 @@ export const userLogin = (email, password) => {
         email,
         password,
       });
-      // check if response is ok
-
-      console.log(response.message);
 
       dispatch(
         userSlice.actions.setUser({
@@ -19,7 +17,11 @@ export const userLogin = (email, password) => {
         })
       );
     } catch (error) {
-      console.log(error);
+      if (error.response.data.errors) {
+        error.response.data.errors.map(({ msg }) => {
+          toast.error(msg);
+        });
+      }
     }
   };
 };
