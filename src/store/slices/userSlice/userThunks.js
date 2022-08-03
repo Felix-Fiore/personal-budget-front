@@ -2,6 +2,25 @@ import { personalBudgetAPI } from '../../../api/personalBudgetAPI';
 import { userSlice } from './userSlice';
 import { toast } from 'react-hot-toast';
 
+// Create a function to save the store state to localStorage
+const saveState = (response) => {
+  try {
+    const serializedState = JSON.stringify(response);
+    localStorage.setItem('state', serializedState);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Create a function to delete the store state from localStorage
+const deleteState = () => {
+  try {
+    localStorage.removeItem('state');
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 const userLogin = (email, password) => {
   return async (dispatch) => {
     try {
@@ -16,6 +35,7 @@ const userLogin = (email, password) => {
           token: response.data.token,
         })
       );
+      saveState(response.data);
     } catch (error) {
       if (error.response.data.errors) {
         error.response.data.errors.map(({ msg }) => {
@@ -41,6 +61,7 @@ const createUser = (name, email, password) => {
           token: response.data.token,
         })
       );
+      saveState(response.data);
     } catch (error) {
       if (error.response.data.errors) {
         error.response.data.errors.map(({ msg }) => {
@@ -54,6 +75,7 @@ const createUser = (name, email, password) => {
 const userLogout = () => {
   return async (dispatch) => {
     dispatch(userSlice.actions.logout());
+    deleteState();
   };
 };
 

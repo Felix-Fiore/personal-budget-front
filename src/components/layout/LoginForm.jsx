@@ -26,8 +26,10 @@ export const LoginForm = () => {
     dispatch(userLogin(email, password));
   };
 
+  const userLogged = localStorage.getItem('state');
+
   useEffect(() => {
-    if (isLoggedIn) {
+    if (isLoggedIn || userLogged != undefined) {
       navigate('/');
     }
   }, [isLoggedIn]);
