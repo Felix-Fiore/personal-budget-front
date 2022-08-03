@@ -2,15 +2,27 @@ import { useNavigate, NavLink } from 'react-router-dom';
 import { userLogout } from '../../store/slices/userSlice/userThunks';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './navBar.module.scss';
+import { useEffect } from 'react';
+
+// Verifies if the user is logged in or not
+function userLoggedIn(userLogged, navigate) {
+  useEffect(() => {
+    if (userLogged == undefined) {
+      navigate('/Login');
+    }
+  }, [userLogged]);
+}
 
 export const NavBar = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
-  const navigateToLogin = () => {
-    navigate('/login');
-  };
+  const userName = useSelector((state) => state.user.name);
+
+  const userLogged = localStorage.getItem('state');
+
+  userLoggedIn(userLogged, navigate);
 
   const handleLogout = () => {
     dispatch(userLogout());
@@ -44,11 +56,11 @@ export const NavBar = () => {
       <ul className={styles.rightSide}>
         <li>
           <div className={styles.userTag}>
-            <span>Felix</span>
+            <span>{userName}</span>
           </div>
         </li>
         <li>
-          <button onClick={navigateToLogin}>
+          <button onClick={handleLogout}>
             {' '}
             <span className="material-symbols-outlined" onClick={handleLogout}>
               logout
