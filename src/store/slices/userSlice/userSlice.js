@@ -21,4 +21,4 @@ export const userSlice = createSlice({
   },
 });
 // Action creators are generated for each case reducer function
-export const { userLoggin } = userSlice.actions;
+export const { setUser, logout } = userSlice.actions;
