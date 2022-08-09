@@ -1,12 +1,21 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { getOperations } from '../../store/slices/operationsSlices/operationsThunks';
 import styles from './lastOperations.module.scss';
 
 export const LastOperations = () => {
+  const dispatch = useDispatch();
+
   let navigate = useNavigate();
 
   const goToOperationsPanel = () => {
     navigate('/operations');
   };
+
+  useEffect(() => {
+    dispatch(getOperations());
+  }, []);
 
   return (
     <div className={styles.listContainer}>

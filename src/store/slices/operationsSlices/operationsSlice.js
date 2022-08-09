@@ -6,10 +6,15 @@ export const operationsSlice = createSlice({
     isLoading: false,
   },
   reducers: {
-    getOperations: (state) => {
+    loadingOperations: (state) => {
       state.isLoading = true;
+    },
+    getOperationsSuccess: (state, action) => {
+      state.isLoading = false;
+      state.operations = action.payload.operations;
     },
   },
 });
 // Action creators are generated for each case reducer function
-export const { getOperations } = operationsSlice.actions;
+export const { loadingOperations, getOperationsSuccess } =
+  operationsSlice.actions;

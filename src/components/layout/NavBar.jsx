@@ -20,12 +20,13 @@ export const NavBar = () => {
 
   const userName = useSelector((state) => state.user.name);
 
-  const userLogged = localStorage.getItem('state');
+  const userLogged = localStorage.getItem('token');
 
   userLoggedIn(userLogged, navigate);
 
   const handleLogout = () => {
     dispatch(userLogout());
+    navigate('/Login');
   };
   return (
     <div className={styles.navBar}>
