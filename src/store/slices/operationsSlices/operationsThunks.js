@@ -1,4 +1,4 @@
-import { instanceWithToken } from '../../../api/personalBudgetAPI';
+import { instanceWithToken } from '../../../api/instanceWithToken';
 import { operationsSlice } from './operationsSlice';
 
 const getOperations = () => {
@@ -14,7 +14,7 @@ const getOperations = () => {
         })
       );
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error.response);
     }
   };
 };

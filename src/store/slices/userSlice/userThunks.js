@@ -4,8 +4,8 @@ import { toast } from 'react-hot-toast';
 
 const saveLocalStorage = (key, response) => {
   try {
-    const serializedState = JSON.stringify(response);
-    localStorage.setItem(key, serializedState);
+    const serializedState = response;
+    window.localStorage.setItem(key, serializedState);
   } catch (err) {
     console.log(err);
   }
@@ -60,7 +60,8 @@ const createUser = (name, email, password) => {
           token: response.data.token,
         })
       );
-      saveState(response.data);
+      saveLocalStorage('name', response.data.name);
+      saveLocalStorage('token', response.data.token);
     } catch (error) {
       if (error.response.data.errors) {
         error.response.data.errors.map(({ msg }) => {
