@@ -2,6 +2,9 @@ import styles from './panelList.module.scss';
 import Modal from 'react-modal';
 import { useState } from 'react';
 import './modalStyle.css';
+import { useDispatch } from 'react-redux';
+import { createOperation } from '../../store/slices/operationsSlices/operationsThunks';
+import { useForm } from '../../hooks/useForm';
 
 const customStyles = {
   content: {
@@ -15,7 +18,27 @@ const customStyles = {
 };
 Modal.setAppElement('#root');
 
+const createOperationFormFields = {
+  amount: '',
+  concept: '',
+  date: '',
+  type: '',
+};
+
 export const PanelLists = () => {
+  const dispatch = useDispatch();
+
+  const { amount, concept, date, type, onInputChange } = useForm(
+    createOperationFormFields
+  );
+
+  const handleCreateOperation = (e) => {
+    e.preventDefault();
+    console.log({ amount, concept, date, type });
+    dispatch(createOperation({ amount, concept, date, type }));
+    setIsOpen(false);
+  };
+
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -44,27 +67,54 @@ export const PanelLists = () => {
             <form>
               <label>
                 <span>Monto</span>
-                <input type="number" />
+                <input
+                  placeholder="Monto"
+                  type="number"
+                  name="amount"
+                  value={amount}
+                  onChange={onInputChange}
+                />
               </label>
               <label>
                 <span>Concepto</span>
-                <select>
-                  <option value="">Comida</option>
-                  <option value="">Impuestos</option>
-                  <option value="">Transporte</option>
-                  <option value="">Entretenimiento</option>
-                  <option value="">Otros</option>
+                <select
+                  name="concept"
+                  value={concept}
+                  onChange={onInputChange}
+                  required
+                >
+                  <option value="" disabled hidden>
+                    ¿Cuál es el concepto de la operación?
+                  </option>
+                  <option>Comida</option>
+                  <option>Impuestos</option>
+                  <option>Transporte</option>
+                  <option>Entretenimiento</option>
+                  <option>Otros</option>
                 </select>
               </label>
               <label>
                 <span>Fecha</span>
-                <input type="date" />
+                <input
+                  type="date"
+                  name="date"
+                  value={date}
+                  onChange={onInputChange}
+                />
               </label>
               <label>
                 <span>Tipo de Operación</span>
-                <select>
-                  <option value="">Ingreso</option>
-                  <option value="">Egreso</option>
+                <select
+                  name="type"
+                  value={type}
+                  onChange={onInputChange}
+                  required
+                >
+                  <option value="" disabled hidden>
+                    ¿Qué tipo de operación es?
+                  </option>
+                  <option>Ingreso</option>
+                  <option>Egreso</option>
                 </select>
               </label>
             </form>
@@ -72,7 +122,12 @@ export const PanelLists = () => {
               <button className={styles.exitButton} onClick={closeModal}>
                 Salir
               </button>
-              <button className={styles.saveButton}>Guardar</button>
+              <button
+                className={styles.saveButton}
+                onClick={handleCreateOperation}
+              >
+                Guardar
+              </button>
             </div>
           </div>
         </Modal>
