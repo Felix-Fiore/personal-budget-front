@@ -4,8 +4,26 @@ import { useNavigate } from 'react-router-dom';
 import { getOperations } from '../../store/slices/operationsSlices/operationsThunks';
 import styles from './lastOperations.module.scss';
 
+const userOperations = (operations, uid) => {
+  for (let i = 0; i < operations.length; i++) {
+    if (operations[i].uid === uid) {
+      let userOperations = operations[i];
+      console.log(userOperations);
+      return userOperations;
+    } else {
+      console.log('No hay operaciones');
+    }
+  }
+};
+
 export const LastOperations = () => {
   const dispatch = useDispatch();
+
+  const { operations } = useSelector((state) => state.operations);
+
+  const { uid } = useSelector((state) => state.user);
+
+  userOperations(operations, uid);
 
   let navigate = useNavigate();
 
