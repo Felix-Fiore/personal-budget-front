@@ -31,6 +31,7 @@ const userLogin = (email, password) => {
         userSlice.actions.setUser({
           name: response.data.name,
           token: response.data.token,
+          uid: response.data.uid,
         })
       );
       saveLocalStorage('name', response.data.name);
@@ -58,6 +59,7 @@ const createUser = (name, email, password) => {
         userSlice.actions.setUser({
           name: response.data.name,
           token: response.data.token,
+          uid: response.data.uid,
         })
       );
       saveLocalStorage('name', response.data.name);
