@@ -57,7 +57,7 @@ export const NavBar = () => {
       <ul className={styles.rightSide}>
         <li>
           <div className={styles.userTag}>
-            <span>{userName}</span>
+            <span>{userName.toUpperCase()}</span>
           </div>
         </li>
         <li>

@@ -13,6 +13,7 @@ const userOperations = (operations, uid) => {
       console.log('No hay operaciones');
     }
   }
+  localStorage.setItem('userOperations', JSON.stringify(userOperations));
   return userOperations;
 };
 
