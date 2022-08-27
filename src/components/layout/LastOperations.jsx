@@ -13,6 +13,7 @@ const userOperations = (operations, uid) => {
       console.log('No hay operaciones');
     }
   }
+  return userOperations;
 };
 
 export const LastOperations = () => {
