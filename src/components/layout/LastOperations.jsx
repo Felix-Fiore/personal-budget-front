@@ -5,11 +5,10 @@ import { getOperations } from '../../store/slices/operationsSlices/operationsThu
 import styles from './lastOperations.module.scss';
 
 const userOperations = (operations, uid) => {
-  for (let i = 0; i < operations.length; i++) {
+  let userOperations = [];
+  for (let i = operations.length - 1; i >= 0; i--) {
     if (operations[i].uid === uid) {
-      let userOperations = operations[i];
-      console.log(userOperations);
-      return userOperations;
+      userOperations.push(operations[i]);
     } else {
       console.log('No hay operaciones');
     }
@@ -23,7 +22,7 @@ export const LastOperations = () => {
 
   const { uid } = useSelector((state) => state.user);
 
-  userOperations(operations, uid);
+  let filteredOperations = userOperations(operations, uid);
 
   let navigate = useNavigate();
 
@@ -50,12 +49,17 @@ export const LastOperations = () => {
                 <th>Concepto</th>
                 <th>Tipo</th>
               </tr>
-              <tr>
-                <td>$100</td>
-                <td>2020-01-01</td>
-                <td>food</td>
-                <td>expense</td>
-              </tr>
+              {
+                /* map function to represent all the operations  */
+                filteredOperations.map((operation) => (
+                  <tr key={operation.id}>
+                    <td>{operation.amount}</td>
+                    <td>{operation.date}</td>
+                    <td>{operation.concept}</td>
+                    <td>{operation.type}</td>
+                  </tr>
+                ))
+              }
             </thead>
           </table>
         </div>

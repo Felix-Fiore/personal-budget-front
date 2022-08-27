@@ -26,7 +26,7 @@ const userLogin = (email, password) => {
         email,
         password,
       });
-      console.log(response);
+      /* console.log(response); */
       dispatch(
         userSlice.actions.setUser({
           name: response.data.name,
